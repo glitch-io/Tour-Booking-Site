@@ -19,7 +19,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 
   const price = await stripe.prices.create({
     unit_amount: tour.price * 100,
-    currency: 'usd',
+    currency: 'inr',
     product: product.id
   });
   // 2) Create checkout session
